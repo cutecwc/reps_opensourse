@@ -12,9 +12,14 @@ try2.py
 ### v2.0 更新：
 添加了learn4系列文件
 附：git 无法推送，error10054 和error3**的问题
-#设置使用http/https本地代理
-git config --global https.proxy http://127.0.0.1:1080
-git config --global https.proxy https://127.0.0.1:1080
+#### 配置socks5代理
+git config --global http.proxy 'socks5://127.0.0.1:1080'
+git config --global https.proxy 'socks5://127.0.0.1:1080'
+#### 配置http代理
+git config --global http.proxy 'http://127.0.0.1:7890'
+git config --global https.proxy 'https://127.0.0.1:7890'
 #取消http/https本地代理
+git config --global --unset http.proxy
+git config --global --unset https.proxy
 git config --global --unset http.proxy
 git config --global --unset https.proxy
